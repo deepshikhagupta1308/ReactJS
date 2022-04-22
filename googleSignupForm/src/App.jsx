@@ -4,7 +4,7 @@ import { useState } from "react";
 import Register from "./Components/Register";
 
 function App() {
-  return <Register />;
+  return <Register color="red" />;
 }
 
 export default App;
