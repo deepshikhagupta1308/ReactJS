@@ -12,6 +12,7 @@ function App() {
   return (
     <>
       <Cal />
+      {/* <Calculator /> */}
       {/* <Cal />
       <Formfunc />
       <Calculator />
