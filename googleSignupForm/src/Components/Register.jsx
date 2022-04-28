@@ -30,7 +30,7 @@ const Register = (props) => {
     } else {
       setErrEmail("");
     }
-    if (!isNaN(confirm)) {
+    if (confirm == "") {
       setErrConfirm("Confirm Your Password");
     } else {
       setErrConfirm("");
