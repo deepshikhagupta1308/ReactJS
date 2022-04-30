@@ -1,7 +1,7 @@
-import { useNavigationType, useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const UserDetail = () => {
-  const [selected, setSelected] = useState([]);
+  // const [selected, setSelected] = useState([]);
   const params = useParams();
   const navigate = useNavigate();
   const { id } = params;
@@ -11,7 +11,7 @@ const UserDetail = () => {
   // console.log("userlist", userlist);
   const userData = userlist.find((item) => item.id === Number(id));
 
-  // console.log("userdata", userData);
+  console.log("userdata", userData);
 
   const _acceptUserList = () => {
     if (localStorage.getItem("acceptedUserList") === null) {
