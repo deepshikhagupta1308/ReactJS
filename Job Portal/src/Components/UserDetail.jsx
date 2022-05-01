@@ -26,6 +26,8 @@ const UserDetail = () => {
     console.log("userLIst", userlist);
     console.log("acceptUserList", acceptedList);
 
+    // const newArr = JSON.parse(userData).filter(ele => ele.id !== userId.id)
+
     for (let i = userlist.length - 1; i >= 0; i--) {
       for (let j = 0; j < acceptedList.length; j++) {
         if (userlist[i] && userlist[i].id === acceptedList[j].id) {
@@ -46,6 +48,22 @@ const UserDetail = () => {
       rejected.push(userData);
       localStorage.setItem("rejectedUserList", JSON.stringify(rejected));
     }
+    let rejectedList = JSON.parse(localStorage.getItem("rejectedUserList"));
+    // console.log("userLIst", userlist);
+    // console.log("acceptUserList", acceptedList);
+
+    // const newArr = JSON.parse(userData).filter(ele => ele.id !== userId.id)
+
+    for (let i = userlist.length - 1; i >= 0; i--) {
+      for (let j = 0; j < rejectedList.length; j++) {
+        if (userlist[i] && userlist[i].id === rejectedList[j].id) {
+          userlist.splice(i, 1);
+        }
+      }
+    }
+    localStorage.setItem("userlist", JSON.stringify(userlist));
+    console.log("newUserLIst", userlist);
+    navigate("/");
   };
   return (
     <>
