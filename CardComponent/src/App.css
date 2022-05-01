@@ -41,3 +41,23 @@ button {
   font-size: calc(10px + 2vmin);
 } */
 
+#parent{
+  background-color: white;
+  gap:19px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin:35px;
+}
+
+#child{
+  background-color: white;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  box-shadow: rgba(99,99,99,0.2) 0px 2px 8px 0px;
+}
+
+img{
+  object-fit:cover;
+  height: 100%;
+  width: 100%;
+}

@@ -14,15 +14,17 @@ const Card = () => {
   //   console.log(movies);
   return (
     <>
-      <div className="card">
+      <div id="parent">
         {movies.map((obj) => {
           return (
             <>
-              <div className="primary-element">
-                <h4>{obj.Title}</h4>
-              </div>
-              <div className="secondary-element">
-                <img src={obj.Poster} alt="" />
+              <div id="child" key={obj.imdbID}>
+                <div>
+                  <h4>{obj.Title}</h4>
+                </div>
+                <div>
+                  <img src={obj.Poster} alt="" />
+                </div>
               </div>
             </>
           );
