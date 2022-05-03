@@ -7,11 +7,12 @@ import Form from "./Components/form";
 import Formfunc from "./Components/formFunc";
 import Calculator from "./Components/Calculator";
 import Cal from "./Components/Cal";
+import UseMemo from "./Components/UseMemo";
 
 function App() {
   return (
     <>
-      <Cal />
+      <UseMemo />
       {/* <Calculator /> */}
       {/* <Cal />
       <Formfunc />
