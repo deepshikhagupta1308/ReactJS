@@ -1,11 +1,37 @@
-import React from "react";
+import { useState } from "react";
 import "./App.css";
 import Card from "./Component/card";
+import { ThemeProvider } from "./context/Theme";
+
 function App() {
+  const lightTheme = {
+    backgroundColor: "white",
+    color: "black",
+  };
+
+  const darkTheme = {
+    backgroundColor: "black",
+    color: "white",
+  };
+
+  const [theme, setTheme] = useState(lightTheme);
+
+  const toggle = () => {
+    //console.log(darkTheme.backgroundColor);
+    if (theme.backgroundColor === lightTheme.backgroundColor) {
+      setTheme(darkTheme);
+    } else {
+      setTheme(lightTheme);
+    }
+  };
+
   return (
-    <>
-      <Card />
-    </>
+    <div style={{ backgroundColor: theme.backgroundColor }}>
+      <ThemeProvider value={{ theme, setTheme }}>
+        <button onClick={toggle}>{theme.backgroundColor}</button>
+        <Card />
+      </ThemeProvider>
+    </div>
   );
 }
 
