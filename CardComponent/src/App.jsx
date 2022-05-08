@@ -26,9 +26,9 @@ function App() {
   };
 
   return (
-    <div style={{ backgroundColor: theme.backgroundColor }}>
+    <div style={{ backgroundColor: theme.backgroundColor, color: theme.color }}>
       <ThemeProvider value={{ theme, setTheme }}>
-        <button onClick={toggle}>{theme.backgroundColor}</button>
+        <button onClick={toggle}>Change Theme</button>
         <Card />
       </ThemeProvider>
     </div>
