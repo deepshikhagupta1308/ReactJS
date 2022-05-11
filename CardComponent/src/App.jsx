@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Card from "./Component/card";
 import { ThemeProvider } from "./context/Theme";
+import GoolgeSignIn from "./Component/SignIn";
 
 function App() {
   const lightTheme = {
