@@ -3,6 +3,7 @@ import "./App.css";
 import Card from "./Component/card";
 import { ThemeProvider } from "./context/Theme";
 import GoolgeSignIn from "./Component/SignIn";
+import Data from "./Component/Data";
 
 function App() {
   const lightTheme = {
@@ -30,7 +31,7 @@ function App() {
     <div style={{ backgroundColor: theme.backgroundColor, color: theme.color }}>
       <ThemeProvider value={{ theme, setTheme }}>
         <button onClick={toggle}>Change Theme</button>
-        <Card />
+        <Data />
       </ThemeProvider>
     </div>
   );
